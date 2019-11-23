@@ -19,7 +19,7 @@ router.get('/:category', (req, res)=>{
             res.status(statusCode.INTERNAL_SERVER_ERROR)
             .send(authUtil.successFalse(responseMessage.INTERNAL_SERVER_ERROR));
         });
-    }else if(category == 0){
+    }else if(category == 'hot'){
         GoldClass.readHot()
         .then(({code, json}) => {
             res.status(code).send(json);
@@ -27,7 +27,7 @@ router.get('/:category', (req, res)=>{
             res.status(statusCode.INTERNAL_SERVER_ERROR)
             .send(authUtil.successFalse(responseMessage.INTERNAL_SERVER_ERROR));
         });
-    }else if(category == 1){
+    }else if(category == 'new'){
         GoldClass.readNew()
         .then(({code, json}) => {
             res.status(code).send(json);
