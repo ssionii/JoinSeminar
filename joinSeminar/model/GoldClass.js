@@ -55,7 +55,7 @@ const goldClass = {
 
             resolve({
                 code:statusCode.OK,
-                json:authUtil.successTrue(responseMessage.READ_HOT_GOLD_CLASS_SUCCESS, data)
+                json:authUtil.successTrue(responseMessage.READ_NEW_GOLD_CLASS_SUCCESS, data)
             });
         });
     },

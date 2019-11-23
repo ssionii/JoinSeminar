@@ -6,7 +6,7 @@ module.exports = {
     READ_NEW_GOLD_CLASS_SUCCESS: "새로운 금손 클래스 조회 성공",
     READ_ALL_GOLD_CLASS_SUCCESS: "금손 클래스 조회 성공",
     LIKE_GOLD_CLASS_SUCCESS: "금손 클래스 좋아요 성공",
-    UNLIKE_GOLD_CLASS_SUCCESS: "금손 클래스 좋아요 성공",
+    UNLIKE_GOLD_CLASS_SUCCESS: "금손 클래스 싫어요 성공",
     NO_GOLD_CLASS: "존재하지 않는 클래스 입니다.",
 
     BEST_SELLING_LIST_SUCCESS: "Best Selling 리스트 조회 성공",
