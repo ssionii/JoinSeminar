@@ -11,5 +11,9 @@ module.exports = {
 
     BEST_SELLING_LIST_SUCCESS: "Best Selling 리스트 조회 성공",
     FOR_U_LIST_SUCCESS: "For U 리스트 조회 성공",
-    MD_RECOM_LIST_SUCCESS: "MD Recommend 리스트 조회 성공"
+    MD_RECOM_LIST_SUCCESS: "MD Recommend 리스트 조회 성공",
+
+    NO_BEST_SELLING: "존재하지 않는 클래스 입니다.",
+    LIKE_BEST_SELLING_SUCCESS: "Best Selling 좋아요 성공",
+    UNLIKE_BEST_SELLING_SUCCESS: "Best Selling 좋아요 취소 성공"
 }
