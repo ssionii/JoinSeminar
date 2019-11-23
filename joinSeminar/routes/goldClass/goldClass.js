@@ -59,5 +59,4 @@ router.get('/like/:goldClassIdx', (req, res)=>{
         });
     }
 })
-
 module.exports = router;
