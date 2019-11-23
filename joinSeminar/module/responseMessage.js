@@ -15,5 +15,13 @@ module.exports = {
 
     NO_BEST_SELLING: "존재하지 않는 클래스 입니다.",
     LIKE_BEST_SELLING_SUCCESS: "Best Selling 좋아요 성공",
-    UNLIKE_BEST_SELLING_SUCCESS: "Best Selling 좋아요 취소 성공"
+    UNLIKE_BEST_SELLING_SUCCESS: "Best Selling 좋아요 취소 성공",
+
+    NO_FOR_U: "존재하지 않는 클래스 입니다.",
+    LIKE_FOR_U_SUCCESS:"For U 좋아요 성공",
+    UNLIKE_FOR_U_SUCCESS:"For U 좋아요 취소 성공",
+
+    NO_MD: "존재하지 않는 클래스 입니다.",
+    LIKE_MD_SUCCESS:"MD recommend 좋아요 성공",
+    UNLIKE_MD_SUCCESS:"MD recommend 좋아요 취소 성공"
 }

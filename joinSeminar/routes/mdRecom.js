@@ -15,4 +15,24 @@ router.get('/', (req, res) => {
         res.status(statusCode.INTERNAL_SERVER_ERROR).send(authUtil.successFalse(responseMessage.INTERNAL_SERVER_ERROR));
     });
 });
+
+router.get('/like/:mdIdx', (req, res)=>{
+    const mdIdx = req.params.mdIdx;
+    console.log(mdIdx);
+
+    if(!mdIdx){
+        res.status(statusCode.BAD_REQUEST)
+        .send(authUtil.successFalse(responseMessage.NULL_VALUE));
+        return;
+    }else{
+        MdRecom.like(mdIdx)
+        .then(({code, json}) => {
+            res.status(code).send(json);
+        }).catch(err => {
+            res.status(statusCode.INTERNAL_SERVER_ERROR)
+            .send(authUtil.successFalse(responseMessage.INTERNAL_SERVER_ERROR));
+        });
+    }
+});
+
 module.exports = router;

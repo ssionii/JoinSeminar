@@ -22,5 +22,36 @@ module.exports = {
                 json:authUtil.successTrue(responseMessage.MD_RECOM_LIST_SUCCESS, mdRecomDB)
             });
         });
+    },
+    like: (mdIdx) => {
+        return new Promise((resolve, reject) => {
+            if(mdIdx >= mdRecomDB.length){
+                resolve({
+                    code:statusCode.BAD_REQUEST,
+                    json:authUtil.successFalse(responseMessage.NO_MD)
+                });
+            }
+
+            if(mdRecomDB[mdIdx].isStar == 0){
+                mdRecomDB[mdIdx].isStar = 1;
+
+                resolve({
+                    code:statusCode.OK,
+                    json:authUtil.successTrue(responseMessage.LIKE_MD_SUCCESS)
+                });
+            }else if(mdRecomDB[mdIdx].isStar == 1){
+                mdRecomDB[mdIdx].isStar = 0;
+
+                resolve({
+                    code:statusCode.OK,
+                    json:authUtil.successTrue(responseMessage.UNLIKE_MD_SUCCESS)
+                });
+            }else{
+                resolve({
+                    code:statusCode.INTERNAL_SERVER_ERROR,
+                    json:authUtil.successFalse(responseMessage.INTERNAL_SERVER_ERROR)
+                });
+            }
+        });
     }
 }

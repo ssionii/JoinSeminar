@@ -38,5 +38,36 @@ module.exports = {
                 json:authUtil.successTrue(responseMessage.FOR_U_LIST_SUCCESS, forUDB)
             });
         });
+    },
+    like: (forUIdx) => {
+        return new Promise((resolve, reject) => {
+            if(forUIdx >= forUDB.length){
+                resolve({
+                    code:statusCode.BAD_REQUEST,
+                    json:authUtil.successFalse(responseMessage.NO_FOR_U)
+                });
+            }
+
+            if(forUDB[forUIdx].isStar == 0){
+                forUDB[forUIdx].isStar = 1;
+
+                resolve({
+                    code:statusCode.OK,
+                    json:authUtil.successTrue(responseMessage.LIKE_FOR_U_SUCCESS)
+                });
+            }else if(forUDB[forUIdx].isStar == 1){
+                forUDB[forUIdx].isStar = 0;
+
+                resolve({
+                    code:statusCode.OK,
+                    json:authUtil.successTrue(responseMessage.UNLIKE_FOR_U_SUCCESS)
+                });
+            }else{
+                resolve({
+                    code:statusCode.INTERNAL_SERVER_ERROR,
+                    json:authUtil.successFalse(responseMessage.INTERNAL_SERVER_ERROR)
+                });
+            }
+        });
     }
 }
