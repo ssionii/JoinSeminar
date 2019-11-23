@@ -13,4 +13,6 @@ router.get('/:category', (req, res)=>{
         .send(authUtil.successFalse(responseMessage.NULL_VALUE));
         return;
     }
-})
+});
+
+module.exports = router;
